@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace oop_contactTracer
 {
-    public partial class Form1 : Form
+    public partial class tracer : Form
     {
-        public Form1()
+        public tracer()
         {
             InitializeComponent();
         }
