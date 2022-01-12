@@ -21,5 +21,73 @@ namespace oop_contactTracer
         {
             time.Text = DateTime.Now.ToShortTimeString();
         }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+            var emptyFields = new List<string>();
+
+            foreach (var ctrl in this.innerTable.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    var tb = ctrl as TextBox;
+                    if (string.IsNullOrEmpty(tb.Text.Trim()))
+                    {
+                        if (tb.Name == "temp")
+                            emptyFields.Add("Temperature");
+                        else if (tb.Name == "mobile")
+                            emptyFields.Add("Phone Number");
+                    }
+                }
+                else if (ctrl is TableLayoutPanel)
+                {
+                    var tlp = ctrl as TableLayoutPanel;
+
+                    if (tlp.Name == "addressTable")
+                    {
+                        var addressINC = false;
+                        foreach (var textbox in tlp.Controls.OfType<TextBox>())
+                        {
+                            if (string.IsNullOrEmpty(textbox.Text.Trim()))
+                            {
+                                addressINC = true; break;
+                            }
+                        }
+                        if (addressINC) emptyFields.Add("Complete Address");
+                    }
+                    else if (tlp.Name == "infoTable")
+                    {
+                        var infoINC = false;
+                        foreach (var textbox in tlp.Controls.OfType<TextBox>())
+                        {
+                            if (textbox.Name != "middle" && 
+                                string.IsNullOrEmpty(textbox.Text.Trim()))
+                            {
+                                infoINC = true; break;
+                            }
+                        }
+                        if (infoINC) emptyFields.Add("Full Name");
+                    }
+                }
+            }
+
+            if (!male.Checked && !female.Checked) emptyFields.Add("Gender");
+
+            if (emptyFields == null || !emptyFields.Any())
+            {
+                // call processData() function
+            }
+            else
+            {
+                string list = ""; emptyFields.Sort();
+                foreach (var item in emptyFields) list += "- " + item + "\n";
+                MessageBox.Show("Please fill out all form fields:\n" + list);
+            }
+        }
+
+        // processData()
+            // initialize variables
+            // append to text file
+            // show success message
     }
 }

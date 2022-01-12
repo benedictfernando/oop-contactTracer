@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tracer));
             this.outerTable = new System.Windows.Forms.TableLayoutPanel();
             this.innerTable = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.headingTable = new System.Windows.Forms.TableLayoutPanel();
             this.heading = new System.Windows.Forms.Label();
             this.note = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.temp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.addressTable = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.house = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.fever = new System.Windows.Forms.CheckBox();
             this.colds = new System.Windows.Forms.CheckBox();
             this.cough = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.infoTable = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.first = new System.Windows.Forms.TextBox();
@@ -69,14 +69,14 @@
             this.dataLabel = new System.Windows.Forms.Label();
             this.infoLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
-            this.statusLabel = new System.Windows.Forms.Label();
+            this.checkLabel = new System.Windows.Forms.Label();
             this.detailsLabel = new System.Windows.Forms.Label();
             this.clock = new System.Windows.Forms.Timer(this.components);
             this.outerTable.SuspendLayout();
             this.innerTable.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.headingTable.SuspendLayout();
+            this.addressTable.SuspendLayout();
+            this.infoTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // outerTable
@@ -105,13 +105,13 @@
             this.innerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.innerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.innerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.innerTable.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.innerTable.Controls.Add(this.headingTable, 0, 0);
             this.innerTable.Controls.Add(this.time, 3, 0);
             this.innerTable.Controls.Add(this.date, 1, 2);
             this.innerTable.Controls.Add(this.temp, 2, 2);
             this.innerTable.Controls.Add(this.label1, 1, 1);
             this.innerTable.Controls.Add(this.label2, 2, 1);
-            this.innerTable.Controls.Add(this.tableLayoutPanel4, 1, 4);
+            this.innerTable.Controls.Add(this.addressTable, 1, 4);
             this.innerTable.Controls.Add(this.label12, 2, 6);
             this.innerTable.Controls.Add(this.submit, 3, 6);
             this.innerTable.Controls.Add(this.mobile, 1, 7);
@@ -119,11 +119,11 @@
             this.innerTable.Controls.Add(this.fever, 1, 5);
             this.innerTable.Controls.Add(this.colds, 2, 5);
             this.innerTable.Controls.Add(this.cough, 3, 5);
-            this.innerTable.Controls.Add(this.tableLayoutPanel5, 1, 3);
+            this.innerTable.Controls.Add(this.infoTable, 1, 3);
             this.innerTable.Controls.Add(this.dataLabel, 0, 1);
             this.innerTable.Controls.Add(this.infoLabel, 0, 3);
             this.innerTable.Controls.Add(this.addressLabel, 0, 4);
-            this.innerTable.Controls.Add(this.statusLabel, 0, 5);
+            this.innerTable.Controls.Add(this.checkLabel, 0, 5);
             this.innerTable.Controls.Add(this.detailsLabel, 0, 6);
             this.innerTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.innerTable.Location = new System.Drawing.Point(23, 23);
@@ -137,26 +137,25 @@
             this.innerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.innerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.innerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.innerTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.innerTable.Size = new System.Drawing.Size(734, 411);
             this.innerTable.TabIndex = 0;
             // 
-            // tableLayoutPanel3
+            // headingTable
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.innerTable.SetColumnSpan(this.tableLayoutPanel3, 3);
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.heading, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.note, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(540, 75);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.headingTable.ColumnCount = 1;
+            this.innerTable.SetColumnSpan(this.headingTable, 3);
+            this.headingTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.headingTable.Controls.Add(this.heading, 0, 0);
+            this.headingTable.Controls.Add(this.note, 0, 1);
+            this.headingTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.headingTable.Location = new System.Drawing.Point(3, 3);
+            this.headingTable.Name = "headingTable";
+            this.headingTable.RowCount = 2;
+            this.headingTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.headingTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.headingTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.headingTable.Size = new System.Drawing.Size(540, 75);
+            this.headingTable.TabIndex = 1;
             // 
             // heading
             // 
@@ -244,30 +243,30 @@
             this.label2.Text = "Temperature (C°)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // tableLayoutPanel4
+            // addressTable
             // 
-            this.tableLayoutPanel4.ColumnCount = 4;
-            this.innerTable.SetColumnSpan(this.tableLayoutPanel4, 3);
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Controls.Add(this.label10, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label9, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.house, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.street, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.barangay, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.city, 3, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(185, 213);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(542, 59);
-            this.tableLayoutPanel4.TabIndex = 14;
+            this.addressTable.ColumnCount = 4;
+            this.innerTable.SetColumnSpan(this.addressTable, 3);
+            this.addressTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.addressTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.addressTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.addressTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.addressTable.Controls.Add(this.label10, 3, 0);
+            this.addressTable.Controls.Add(this.label9, 2, 0);
+            this.addressTable.Controls.Add(this.house, 0, 1);
+            this.addressTable.Controls.Add(this.street, 1, 1);
+            this.addressTable.Controls.Add(this.barangay, 2, 1);
+            this.addressTable.Controls.Add(this.city, 3, 1);
+            this.addressTable.Controls.Add(this.label7, 0, 0);
+            this.addressTable.Controls.Add(this.label8, 1, 0);
+            this.addressTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addressTable.Location = new System.Drawing.Point(185, 213);
+            this.addressTable.Name = "addressTable";
+            this.addressTable.RowCount = 2;
+            this.addressTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.addressTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.addressTable.Size = new System.Drawing.Size(542, 59);
+            this.addressTable.TabIndex = 14;
             // 
             // label10
             // 
@@ -374,6 +373,7 @@
             this.submit.TabIndex = 35;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // mobile
             // 
@@ -428,32 +428,32 @@
             this.cough.Text = "Currently having cough?";
             this.cough.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel5
+            // infoTable
             // 
-            this.tableLayoutPanel5.ColumnCount = 5;
-            this.innerTable.SetColumnSpan(this.tableLayoutPanel5, 3);
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33966F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33966F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.663262F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.3288F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.32861F));
-            this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label5, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.first, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.last, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.middle, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.male, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.female, 4, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label6, 3, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(185, 148);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(542, 59);
-            this.tableLayoutPanel5.TabIndex = 8;
+            this.infoTable.ColumnCount = 5;
+            this.innerTable.SetColumnSpan(this.infoTable, 3);
+            this.infoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33966F));
+            this.infoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33966F));
+            this.infoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.663262F));
+            this.infoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.3288F));
+            this.infoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.32861F));
+            this.infoTable.Controls.Add(this.label3, 0, 0);
+            this.infoTable.Controls.Add(this.label5, 2, 0);
+            this.infoTable.Controls.Add(this.first, 1, 1);
+            this.infoTable.Controls.Add(this.last, 0, 1);
+            this.infoTable.Controls.Add(this.label4, 1, 0);
+            this.infoTable.Controls.Add(this.middle, 2, 1);
+            this.infoTable.Controls.Add(this.male, 3, 1);
+            this.infoTable.Controls.Add(this.female, 4, 1);
+            this.infoTable.Controls.Add(this.label6, 3, 0);
+            this.infoTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoTable.Location = new System.Drawing.Point(185, 148);
+            this.infoTable.Name = "infoTable";
+            this.infoTable.RowCount = 2;
+            this.infoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.infoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.infoTable.Size = new System.Drawing.Size(542, 59);
+            this.infoTable.TabIndex = 8;
             // 
             // label3
             // 
@@ -543,7 +543,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.tableLayoutPanel5.SetColumnSpan(this.label6, 2);
+            this.infoTable.SetColumnSpan(this.label6, 2);
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(399, 0);
             this.label6.Name = "label6";
@@ -592,18 +592,18 @@
             this.addressLabel.Text = "Address";
             this.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // statusLabel
+            // checkLabel
             // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.statusLabel.Location = new System.Drawing.Point(3, 275);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.statusLabel.Size = new System.Drawing.Size(176, 65);
-            this.statusLabel.TabIndex = 27;
-            this.statusLabel.Text = "Health Status";
-            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkLabel.AutoSize = true;
+            this.checkLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.checkLabel.Location = new System.Drawing.Point(3, 275);
+            this.checkLabel.Name = "checkLabel";
+            this.checkLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.checkLabel.Size = new System.Drawing.Size(176, 65);
+            this.checkLabel.TabIndex = 27;
+            this.checkLabel.Text = "Health Check";
+            this.checkLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // detailsLabel
             // 
@@ -641,12 +641,12 @@
             this.outerTable.ResumeLayout(false);
             this.innerTable.ResumeLayout(false);
             this.innerTable.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
+            this.headingTable.ResumeLayout(false);
+            this.headingTable.PerformLayout();
+            this.addressTable.ResumeLayout(false);
+            this.addressTable.PerformLayout();
+            this.infoTable.ResumeLayout(false);
+            this.infoTable.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -656,7 +656,7 @@
         private System.Windows.Forms.TableLayoutPanel outerTable;
         private System.Windows.Forms.TableLayoutPanel innerTable;
         private System.Windows.Forms.Label heading;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel headingTable;
         private System.Windows.Forms.Label note;
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.DateTimePicker date;
@@ -668,7 +668,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel addressTable;
         private System.Windows.Forms.TextBox house;
         private System.Windows.Forms.TextBox street;
         private System.Windows.Forms.TextBox barangay;
@@ -684,7 +684,7 @@
         private System.Windows.Forms.CheckBox fever;
         private System.Windows.Forms.CheckBox colds;
         private System.Windows.Forms.CheckBox cough;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel infoTable;
         private System.Windows.Forms.TextBox middle;
         private System.Windows.Forms.RadioButton male;
         private System.Windows.Forms.RadioButton female;
@@ -692,7 +692,7 @@
         private System.Windows.Forms.Label dataLabel;
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Label addressLabel;
-        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label checkLabel;
         private System.Windows.Forms.Label detailsLabel;
         private System.Windows.Forms.Timer clock;
     }
