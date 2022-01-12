@@ -205,12 +205,10 @@
             this.date.Enabled = false;
             this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.date.Location = new System.Drawing.Point(185, 120);
-            this.date.MaxDate = new System.DateTime(2022, 1, 12, 0, 0, 0, 0);
-            this.date.MinDate = new System.DateTime(2022, 1, 12, 0, 0, 0, 0);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(176, 22);
             this.date.TabIndex = 5;
-            this.date.Value = new System.DateTime(2022, 1, 12, 0, 0, 0, 0);
+            this.date.Value = new System.DateTime(2022, 1, 13, 0, 38, 4, 405);
             // 
             // temp
             // 

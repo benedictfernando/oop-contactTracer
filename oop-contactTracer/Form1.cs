@@ -19,6 +19,7 @@ namespace oop_contactTracer
 
         private void clock_Tick(object sender, EventArgs e)
         {
+            date.Value = DateTime.Now;
             time.Text = DateTime.Now.ToShortTimeString();
         }
 
@@ -86,7 +87,7 @@ namespace oop_contactTracer
 
         private void processData()
         {
-            string dateTime = DateTime.Now.ToLocalTime().ToString(),
+            string dateTime = DateTime.Now.ToString(),
                 temp = this.temp.Text,
                 fullName = $"{last.Text}, {first.Text} {middle.Text}",
                 completeAddress = $"{house.Text} " +
