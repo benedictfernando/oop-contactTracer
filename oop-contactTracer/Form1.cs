@@ -16,6 +16,5 @@ namespace oop_contactTracer
         {
             InitializeComponent();
         }
-
     }
 }
