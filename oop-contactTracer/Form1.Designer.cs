@@ -180,7 +180,8 @@
             this.note.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.note.Size = new System.Drawing.Size(534, 23);
             this.note.TabIndex = 1;
-            this.note.Text = "Note: Please fill out all fields honestly.";
+            this.note.Text = "Note: Please fill out all fields honestly. Also, kindly not forget to submit this" +
+    " afterwards.";
             this.note.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // time
@@ -194,6 +195,7 @@
             this.innerTable.SetRowSpan(this.time, 3);
             this.time.Size = new System.Drawing.Size(178, 145);
             this.time.TabIndex = 2;
+            this.time.Text = "Time";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // date
@@ -216,6 +218,7 @@
             this.temp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.temp.Location = new System.Drawing.Point(367, 120);
             this.temp.Name = "temp";
+            this.temp.PlaceholderText = "Ex: 35.6";
             this.temp.Size = new System.Drawing.Size(176, 22);
             this.temp.TabIndex = 7;
             // 
@@ -238,7 +241,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 32);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Temperature";
+            this.label2.Text = "Temperature (C°)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel4
@@ -285,7 +288,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(156, 29);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Barangay";
+            this.label9.Text = "Subdivision / District";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // house
@@ -293,6 +296,7 @@
             this.house.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.house.Location = new System.Drawing.Point(3, 34);
             this.house.Name = "house";
+            this.house.PlaceholderText = "Ex: 123";
             this.house.Size = new System.Drawing.Size(48, 22);
             this.house.TabIndex = 20;
             // 
@@ -301,6 +305,7 @@
             this.street.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.street.Location = new System.Drawing.Point(57, 34);
             this.street.Name = "street";
+            this.street.PlaceholderText = "Ex: 25th Street";
             this.street.Size = new System.Drawing.Size(156, 22);
             this.street.TabIndex = 22;
             // 
@@ -309,6 +314,7 @@
             this.barangay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barangay.Location = new System.Drawing.Point(219, 34);
             this.barangay.Name = "barangay";
+            this.barangay.PlaceholderText = "Ex: BGC";
             this.barangay.Size = new System.Drawing.Size(156, 22);
             this.barangay.TabIndex = 24;
             // 
@@ -317,6 +323,7 @@
             this.city.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.city.Location = new System.Drawing.Point(381, 34);
             this.city.Name = "city";
+            this.city.PlaceholderText = "Ex: Taguig";
             this.city.Size = new System.Drawing.Size(158, 22);
             this.city.TabIndex = 26;
             // 
@@ -373,6 +380,7 @@
             this.mobile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mobile.Location = new System.Drawing.Point(185, 375);
             this.mobile.Name = "mobile";
+            this.mobile.PlaceholderText = "Ex: 0912 345 6789";
             this.mobile.Size = new System.Drawing.Size(176, 22);
             this.mobile.TabIndex = 33;
             // 
@@ -474,6 +482,7 @@
             this.first.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.first.Location = new System.Drawing.Point(183, 34);
             this.first.Name = "first";
+            this.first.PlaceholderText = "Ex: Juan";
             this.first.Size = new System.Drawing.Size(174, 22);
             this.first.TabIndex = 12;
             // 
@@ -482,6 +491,7 @@
             this.last.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.last.Location = new System.Drawing.Point(3, 34);
             this.last.Name = "last";
+            this.last.PlaceholderText = "Ex: Dela Cruz";
             this.last.Size = new System.Drawing.Size(174, 22);
             this.last.TabIndex = 10;
             // 
