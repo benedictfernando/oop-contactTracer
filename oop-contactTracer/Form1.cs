@@ -16,5 +16,10 @@ namespace oop_contactTracer
         {
             InitializeComponent();
         }
+
+        private void clock_Tick(object sender, EventArgs e)
+        {
+            time.Text = DateTime.Now.ToShortTimeString();
+        }
     }
 }

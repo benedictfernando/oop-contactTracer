@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tracer));
             this.outerTable = new System.Windows.Forms.TableLayoutPanel();
             this.innerTable = new System.Windows.Forms.TableLayoutPanel();
@@ -70,6 +71,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.clock = new System.Windows.Forms.Timer(this.components);
             this.outerTable.SuspendLayout();
             this.innerTable.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -192,7 +194,6 @@
             this.innerTable.SetRowSpan(this.time, 3);
             this.time.Size = new System.Drawing.Size(178, 145);
             this.time.TabIndex = 2;
-            this.time.Text = "4:09 PM";
             this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // date
@@ -608,6 +609,12 @@
             this.label17.Text = "Contact Details";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // clock
+            // 
+            this.clock.Enabled = true;
+            this.clock.Interval = 1000;
+            this.clock.Tick += new System.EventHandler(this.clock_Tick);
+            // 
             // tracer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -677,5 +684,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Timer clock;
     }
 }
