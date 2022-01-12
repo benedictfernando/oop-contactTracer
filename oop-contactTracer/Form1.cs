@@ -107,7 +107,36 @@ namespace oop_contactTracer
             }
 
             // append to text file
-            // show success message
+
+            if (MessageBox.Show($"Your form has successfully pushed through"
+                + $", {first.Text}~ much thanks!\n\nWant to submit again?",
+                "Submission Complete", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                    clearAll(innerTable); else Application.Exit();
+        }
+
+        private void clearAll(Control table)
+        {
+            foreach (var control in table.Controls)
+            {
+                if (control is TextBox)
+                    (control as TextBox).Text = string.Empty;
+                else if (control is RadioButton)
+                    (control as RadioButton).Checked = false;
+                else if (control is CheckBox)
+                    (control as CheckBox).Checked = false;
+                else if (control is TableLayoutPanel)
+                    clearAll(control as TableLayoutPanel);
+            }
+        }
+
+        private void appClosing(object sender, FormClosingEventArgs e)
+        {
+            var msg = "Thank you for using C#'s Contact Tracer~ keep safe!";
+            if (MessageBox.Show("Are you really sure to exit?",
+                "Exit Program", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Stop) == DialogResult.Yes)
+                    MessageBox.Show(msg); else e.Cancel = true;
         }
     }
 }

@@ -636,6 +636,7 @@
             this.MaximizeBox = false;
             this.Name = "tracer";
             this.Text = "Contact Tracer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.appClosing);
             this.outerTable.ResumeLayout(false);
             this.innerTable.ResumeLayout(false);
             this.innerTable.PerformLayout();
