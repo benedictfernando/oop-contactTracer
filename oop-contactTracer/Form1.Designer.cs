@@ -37,40 +37,40 @@
             this.note = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.temp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.house = new System.Windows.Forms.TextBox();
+            this.street = new System.Windows.Forms.TextBox();
+            this.barangay = new System.Windows.Forms.TextBox();
+            this.city = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.submit = new System.Windows.Forms.Button();
+            this.mobile = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.fever = new System.Windows.Forms.CheckBox();
+            this.colds = new System.Windows.Forms.CheckBox();
+            this.cough = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.first = new System.Windows.Forms.TextBox();
+            this.last = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.middle = new System.Windows.Forms.TextBox();
+            this.male = new System.Windows.Forms.RadioButton();
+            this.female = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataLabel = new System.Windows.Forms.Label();
+            this.infoLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.detailsLabel = new System.Windows.Forms.Label();
             this.clock = new System.Windows.Forms.Timer(this.components);
             this.outerTable.SuspendLayout();
             this.innerTable.SuspendLayout();
@@ -108,23 +108,23 @@
             this.innerTable.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.innerTable.Controls.Add(this.time, 3, 0);
             this.innerTable.Controls.Add(this.date, 1, 2);
-            this.innerTable.Controls.Add(this.textBox1, 2, 2);
+            this.innerTable.Controls.Add(this.temp, 2, 2);
             this.innerTable.Controls.Add(this.label1, 1, 1);
             this.innerTable.Controls.Add(this.label2, 2, 1);
             this.innerTable.Controls.Add(this.tableLayoutPanel4, 1, 4);
-            this.innerTable.Controls.Add(this.label10, 2, 6);
-            this.innerTable.Controls.Add(this.button1, 3, 6);
-            this.innerTable.Controls.Add(this.textBox9, 1, 7);
+            this.innerTable.Controls.Add(this.label12, 2, 6);
+            this.innerTable.Controls.Add(this.submit, 3, 6);
+            this.innerTable.Controls.Add(this.mobile, 1, 7);
             this.innerTable.Controls.Add(this.label11, 1, 6);
-            this.innerTable.Controls.Add(this.checkBox1, 1, 5);
-            this.innerTable.Controls.Add(this.checkBox2, 2, 5);
-            this.innerTable.Controls.Add(this.checkBox3, 3, 5);
+            this.innerTable.Controls.Add(this.fever, 1, 5);
+            this.innerTable.Controls.Add(this.colds, 2, 5);
+            this.innerTable.Controls.Add(this.cough, 3, 5);
             this.innerTable.Controls.Add(this.tableLayoutPanel5, 1, 3);
-            this.innerTable.Controls.Add(this.label13, 0, 1);
-            this.innerTable.Controls.Add(this.label14, 0, 3);
-            this.innerTable.Controls.Add(this.label15, 0, 4);
-            this.innerTable.Controls.Add(this.label16, 0, 5);
-            this.innerTable.Controls.Add(this.label17, 0, 6);
+            this.innerTable.Controls.Add(this.dataLabel, 0, 1);
+            this.innerTable.Controls.Add(this.infoLabel, 0, 3);
+            this.innerTable.Controls.Add(this.addressLabel, 0, 4);
+            this.innerTable.Controls.Add(this.statusLabel, 0, 5);
+            this.innerTable.Controls.Add(this.detailsLabel, 0, 6);
             this.innerTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.innerTable.Location = new System.Drawing.Point(23, 23);
             this.innerTable.Name = "innerTable";
@@ -211,13 +211,13 @@
             this.date.TabIndex = 5;
             this.date.Value = new System.DateTime(2022, 1, 12, 0, 0, 0, 0);
             // 
-            // textBox1
+            // temp
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(367, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 22);
-            this.textBox1.TabIndex = 7;
+            this.temp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.temp.Location = new System.Drawing.Point(367, 120);
+            this.temp.Name = "temp";
+            this.temp.Size = new System.Drawing.Size(176, 22);
+            this.temp.TabIndex = 7;
             // 
             // label1
             // 
@@ -249,14 +249,14 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Controls.Add(this.label9, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox5, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox6, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox7, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox8, 3, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label10, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label9, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.house, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.street, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.barangay, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.city, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label8, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(185, 213);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -266,115 +266,115 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(542, 59);
             this.tableLayoutPanel4.TabIndex = 14;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(381, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 29);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "City";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(381, 0);
+            this.label9.Location = new System.Drawing.Point(219, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 29);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "City";
+            this.label9.Size = new System.Drawing.Size(156, 29);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Barangay";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label8
+            // house
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(219, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 29);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Barangay";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.house.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.house.Location = new System.Drawing.Point(3, 34);
+            this.house.Name = "house";
+            this.house.Size = new System.Drawing.Size(48, 22);
+            this.house.TabIndex = 20;
             // 
-            // textBox5
+            // street
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox5.Location = new System.Drawing.Point(3, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 22);
-            this.textBox5.TabIndex = 20;
+            this.street.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.street.Location = new System.Drawing.Point(57, 34);
+            this.street.Name = "street";
+            this.street.Size = new System.Drawing.Size(156, 22);
+            this.street.TabIndex = 22;
             // 
-            // textBox6
+            // barangay
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox6.Location = new System.Drawing.Point(57, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 22);
-            this.textBox6.TabIndex = 22;
+            this.barangay.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barangay.Location = new System.Drawing.Point(219, 34);
+            this.barangay.Name = "barangay";
+            this.barangay.Size = new System.Drawing.Size(156, 22);
+            this.barangay.TabIndex = 24;
             // 
-            // textBox7
+            // city
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox7.Location = new System.Drawing.Point(219, 34);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(156, 22);
-            this.textBox7.TabIndex = 24;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox8.Location = new System.Drawing.Point(381, 34);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(158, 22);
-            this.textBox8.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 29);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "No.";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.city.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.city.Location = new System.Drawing.Point(381, 34);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(158, 22);
+            this.city.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(57, 0);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 29);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Street";
+            this.label7.Size = new System.Drawing.Size(48, 29);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "No.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(367, 340);
-            this.label10.Name = "label10";
-            this.innerTable.SetRowSpan(this.label10, 2);
-            this.label10.Size = new System.Drawing.Size(176, 67);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Fair Use: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut sus" +
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(57, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(156, 29);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Street";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(367, 340);
+            this.label12.Name = "label12";
+            this.innerTable.SetRowSpan(this.label12, 2);
+            this.label12.Size = new System.Drawing.Size(176, 67);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Fair Use: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut sus" +
     "cipit elit. ";
             // 
-            // button1
+            // submit
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(549, 343);
-            this.button1.Name = "button1";
-            this.innerTable.SetRowSpan(this.button1, 2);
-            this.button1.Size = new System.Drawing.Size(178, 61);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.submit.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.submit.Location = new System.Drawing.Point(549, 343);
+            this.submit.Name = "submit";
+            this.innerTable.SetRowSpan(this.submit, 2);
+            this.submit.Size = new System.Drawing.Size(178, 61);
+            this.submit.TabIndex = 35;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // mobile
             // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(185, 375);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(176, 22);
-            this.textBox9.TabIndex = 33;
+            this.mobile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mobile.Location = new System.Drawing.Point(185, 375);
+            this.mobile.Name = "mobile";
+            this.mobile.Size = new System.Drawing.Size(176, 22);
+            this.mobile.TabIndex = 33;
             // 
             // label11
             // 
@@ -387,38 +387,38 @@
             this.label11.Text = "Phone No.";
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // checkBox1
+            // fever
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(185, 278);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(176, 59);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "Currently having fever?";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.fever.AutoSize = true;
+            this.fever.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fever.Location = new System.Drawing.Point(185, 278);
+            this.fever.Name = "fever";
+            this.fever.Size = new System.Drawing.Size(176, 59);
+            this.fever.TabIndex = 28;
+            this.fever.Text = "Currently having fever?";
+            this.fever.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // colds
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(367, 278);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(176, 59);
-            this.checkBox2.TabIndex = 29;
-            this.checkBox2.Text = "Currently having colds?";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.colds.AutoSize = true;
+            this.colds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colds.Location = new System.Drawing.Point(367, 278);
+            this.colds.Name = "colds";
+            this.colds.Size = new System.Drawing.Size(176, 59);
+            this.colds.TabIndex = 29;
+            this.colds.Text = "Currently having colds?";
+            this.colds.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cough
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox3.Location = new System.Drawing.Point(549, 278);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(178, 59);
-            this.checkBox3.TabIndex = 30;
-            this.checkBox3.Text = "Currently having cough?";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cough.AutoSize = true;
+            this.cough.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cough.Location = new System.Drawing.Point(549, 278);
+            this.cough.Name = "cough";
+            this.cough.Size = new System.Drawing.Size(178, 59);
+            this.cough.TabIndex = 30;
+            this.cough.Text = "Currently having cough?";
+            this.cough.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -431,13 +431,13 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.32861F));
             this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox4, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.textBox3, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.first, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.last, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox2, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.radioButton1, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.radioButton2, 4, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label12, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.middle, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.male, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.female, 4, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label6, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(185, 148);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -469,21 +469,21 @@
             this.label5.Text = "M.I.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // textBox4
+            // first
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox4.Location = new System.Drawing.Point(183, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 22);
-            this.textBox4.TabIndex = 12;
+            this.first.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.first.Location = new System.Drawing.Point(183, 34);
+            this.first.Name = "first";
+            this.first.Size = new System.Drawing.Size(174, 22);
+            this.first.TabIndex = 12;
             // 
-            // textBox3
+            // last
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox3.Location = new System.Drawing.Point(3, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 22);
-            this.textBox3.TabIndex = 10;
+            this.last.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.last.Location = new System.Drawing.Point(3, 34);
+            this.last.Name = "last";
+            this.last.Size = new System.Drawing.Size(174, 22);
+            this.last.TabIndex = 10;
             // 
             // label4
             // 
@@ -496,118 +496,118 @@
             this.label4.Text = "Given Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // textBox2
+            // middle
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Location = new System.Drawing.Point(363, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(30, 22);
-            this.textBox2.TabIndex = 14;
+            this.middle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.middle.Location = new System.Drawing.Point(363, 34);
+            this.middle.Name = "middle";
+            this.middle.Size = new System.Drawing.Size(30, 22);
+            this.middle.TabIndex = 14;
             // 
-            // radioButton1
+            // male
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radioButton1.Location = new System.Drawing.Point(399, 35);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.radioButton1.Size = new System.Drawing.Size(60, 21);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.male.AutoSize = true;
+            this.male.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.male.Location = new System.Drawing.Point(399, 35);
+            this.male.Name = "male";
+            this.male.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.male.Size = new System.Drawing.Size(60, 21);
+            this.male.TabIndex = 16;
+            this.male.TabStop = true;
+            this.male.Text = "Male";
+            this.male.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radioButton2.Location = new System.Drawing.Point(465, 35);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.radioButton2.Size = new System.Drawing.Size(74, 21);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.female.AutoSize = true;
+            this.female.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.female.Location = new System.Drawing.Point(465, 35);
+            this.female.Name = "female";
+            this.female.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.female.Size = new System.Drawing.Size(74, 21);
+            this.female.TabIndex = 17;
+            this.female.TabStop = true;
+            this.female.Text = "Female";
+            this.female.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // label6
             // 
-            this.label12.AutoSize = true;
-            this.tableLayoutPanel5.SetColumnSpan(this.label12, 2);
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(399, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 29);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Gender";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label6.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.label6, 2);
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(399, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 29);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Gender";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label13
+            // dataLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 81);
-            this.label13.Name = "label13";
-            this.label13.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.innerTable.SetRowSpan(this.label13, 2);
-            this.label13.Size = new System.Drawing.Size(176, 64);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Current Data";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dataLabel.AutoSize = true;
+            this.dataLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.dataLabel.Location = new System.Drawing.Point(3, 81);
+            this.dataLabel.Name = "dataLabel";
+            this.dataLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.innerTable.SetRowSpan(this.dataLabel, 2);
+            this.dataLabel.Size = new System.Drawing.Size(176, 64);
+            this.dataLabel.TabIndex = 3;
+            this.dataLabel.Text = "Current Data";
+            this.dataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // infoLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(3, 145);
-            this.label14.Name = "label14";
-            this.label14.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.label14.Size = new System.Drawing.Size(176, 65);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "Personal Information";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.infoLabel.AutoSize = true;
+            this.infoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.infoLabel.Location = new System.Drawing.Point(3, 145);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.infoLabel.Size = new System.Drawing.Size(176, 65);
+            this.infoLabel.TabIndex = 8;
+            this.infoLabel.Text = "Personal Information";
+            this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label15
+            // addressLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(3, 210);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.label15.Size = new System.Drawing.Size(176, 65);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Address";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addressLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.addressLabel.Location = new System.Drawing.Point(3, 210);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.addressLabel.Size = new System.Drawing.Size(176, 65);
+            this.addressLabel.TabIndex = 18;
+            this.addressLabel.Text = "Address";
+            this.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label16
+            // statusLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(3, 275);
-            this.label16.Name = "label16";
-            this.label16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.label16.Size = new System.Drawing.Size(176, 65);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "Health Status";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.statusLabel.Location = new System.Drawing.Point(3, 275);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.statusLabel.Size = new System.Drawing.Size(176, 65);
+            this.statusLabel.TabIndex = 27;
+            this.statusLabel.Text = "Health Status";
+            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label17
+            // detailsLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(3, 340);
-            this.label17.Name = "label17";
-            this.label17.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.innerTable.SetRowSpan(this.label17, 2);
-            this.label17.Size = new System.Drawing.Size(176, 67);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "Contact Details";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.detailsLabel.AutoSize = true;
+            this.detailsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.detailsLabel.Location = new System.Drawing.Point(3, 340);
+            this.detailsLabel.Name = "detailsLabel";
+            this.detailsLabel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.innerTable.SetRowSpan(this.detailsLabel, 2);
+            this.detailsLabel.Size = new System.Drawing.Size(176, 67);
+            this.detailsLabel.TabIndex = 31;
+            this.detailsLabel.Text = "Contact Details";
+            this.detailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // clock
             // 
@@ -650,40 +650,40 @@
         private System.Windows.Forms.Label note;
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox temp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox last;
+        private System.Windows.Forms.TextBox first;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox house;
+        private System.Windows.Forms.TextBox street;
+        private System.Windows.Forms.TextBox barangay;
+        private System.Windows.Forms.TextBox city;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.TextBox mobile;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox fever;
+        private System.Windows.Forms.CheckBox colds;
+        private System.Windows.Forms.CheckBox cough;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox middle;
+        private System.Windows.Forms.RadioButton male;
+        private System.Windows.Forms.RadioButton female;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label dataLabel;
+        private System.Windows.Forms.Label infoLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label detailsLabel;
         private System.Windows.Forms.Timer clock;
     }
 }
