@@ -360,8 +360,8 @@
             this.innerTable.SetRowSpan(this.label12, 2);
             this.label12.Size = new System.Drawing.Size(176, 67);
             this.label12.TabIndex = 34;
-            this.label12.Text = "Fair Use: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut sus" +
-    "cipit elit. ";
+            this.label12.Text = "By submitting, you agree to allow us store and use your data for tracking purpose" +
+    "s, to keep us safe in this COVID-19 pandemic.";
             // 
             // submit
             // 
