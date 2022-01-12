@@ -80,8 +80,10 @@ namespace oop_contactTracer
             else
             {
                 string list = ""; emptyFields.Sort();
-                foreach (var item in emptyFields) list += "- " + item + "\n";
-                MessageBox.Show("Please fill out all form fields:\n" + list);
+                foreach (var item in emptyFields) list += "\n" + "- " + item;
+                MessageBox.Show("Please fill out all form fields:" + list,
+                    "Submission Incomplete", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
             }
         }
 
