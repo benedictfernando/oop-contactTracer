@@ -73,10 +73,7 @@ namespace oop_contactTracer
 
             if (!male.Checked && !female.Checked) emptyFields.Add("Gender");
 
-            if (emptyFields == null || !emptyFields.Any())
-            {
-                // call processData() function
-            }
+            if (emptyFields == null || !emptyFields.Any()) processData();
             else
             {
                 string list = ""; emptyFields.Sort();
@@ -87,9 +84,29 @@ namespace oop_contactTracer
             }
         }
 
-        // processData()
-            // initialize variables
+        private void processData()
+        {
+            string dateTime = DateTime.Now.ToLocalTime().ToString(),
+                temp = this.temp.Text,
+                fullName = $"{last.Text}, {first.Text} {middle.Text}",
+                completeAddress = $"{house.Text} " +
+                    $"{street.Text} {barangay.Text}, {city.Text}",
+                contacts = mobile.Text,
+                gender, health = "";
+
+            if (male.Checked) gender = "Male"; else gender = "Female";
+
+            foreach (var checkbox in innerTable.Controls.OfType<CheckBox>())
+            {
+                if (checkbox.Checked)
+                {
+                    if (health == "") health = $"Has {checkbox.Name}";
+                    else health += $", has {checkbox.Name}";
+                }
+            }
+
             // append to text file
             // show success message
+        }
     }
 }
