@@ -108,6 +108,8 @@ namespace oop_contactTracer
                 }
             }
 
+            if (health == "") health = "No COVID-like symptoms";
+
             databaseEnter(new List<string>() {
                 dateTime, temp, fullName, gender,
                 completeAddress, health, contacts
