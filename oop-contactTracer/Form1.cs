@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;    // For handling & manipulating files
-using System.Security.Principal;    // For getting current user's name 
 
 namespace oop_contactTracer
 {
@@ -19,6 +18,7 @@ namespace oop_contactTracer
             InitializeComponent();
         }
 
+        // Set date & time controls up in real-time
         private void clock_Tick(object sender, EventArgs e)
         {
             date.Value = DateTime.Now;
@@ -29,9 +29,10 @@ namespace oop_contactTracer
         {
             var emptyFields = new List<string>();
 
+            // Recursively check for any empty fields present on submit
             foreach (var ctrl in this.innerTable.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is TextBox)    // For textboxes
                 {
                     var tb = ctrl as TextBox;
                     if (string.IsNullOrEmpty(tb.Text.Trim()))
@@ -42,7 +43,7 @@ namespace oop_contactTracer
                             emptyFields.Add("Phone Number");
                     }
                 }
-                else if (ctrl is TableLayoutPanel)
+                else if (ctrl is TableLayoutPanel)  // For table panel layouts
                 {
                     var tlp = ctrl as TableLayoutPanel;
 
@@ -74,30 +75,31 @@ namespace oop_contactTracer
                 }
             }
 
+            // For radio buttons, 'gender' fields in particular
             if (!male.Checked && !female.Checked) emptyFields.Add("Gender");
 
+            // Determine path depending on number of items in 'emptyFields'
             if (emptyFields == null || !emptyFields.Any()) processData();
             else
             {
                 string list = ""; emptyFields.Sort();
                 foreach (var item in emptyFields) list += "\n" + "- " + item;
+
+                // Show all empty fields in a message box 
                 MessageBox.Show("Please fill out all form fields:" + list,
                     "Submission Incomplete", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
             }
         }
 
+        // Process data if all fields are filled up
         private void processData()
         {
-            string dateTime = DateTime.Now.ToString(),
-                temp = this.temp.Text,
+            string dateTime = DateTime.Now.ToString(), temp = this.temp.Text,
                 fullName = $"{last.Text}, {first.Text} {middle.Text}",
                 completeAddress = $"{house.Text} " +
                     $"{street.Text} {barangay.Text}, {city.Text}",
-                contacts = mobile.Text,
-                gender, health = "";
-
-            if (male.Checked) gender = "Male"; else gender = "Female";
+                contacts = mobile.Text, gender, health = "";
 
             foreach (var checkbox in innerTable.Controls.OfType<CheckBox>())
             {
@@ -109,12 +111,15 @@ namespace oop_contactTracer
             }
 
             if (health == "") health = "No COVID-like symptoms";
+            if (male.Checked) gender = "Male"; else gender = "Female";
 
+            // Execute database entry based on initialized fields above
             databaseEnter(new List<string>() {
                 dateTime, temp, fullName, gender,
                 completeAddress, health, contacts
             });
 
+            // Determine between form resubmission or application exit
             if (MessageBox.Show($"Your form has successfully pushed through"
                 + $", {first.Text}~ much thanks!\n\nWant to submit again?",
                 "Submission Complete", MessageBoxButtons.YesNo,
@@ -122,22 +127,26 @@ namespace oop_contactTracer
                     clearAll(innerTable); else Application.Exit();
         }
 
+        // Enter entries to database
         private void databaseEnter(List<string> entries)
         {
-            string enter = "";
+            // Initialize database file & its directory
             string username = "Benedict Fernando";
             string database = $@"C:\Users\{username}\Downloads\CTDatabase.txt";
+            // Note: 'username' & 'database' can be changed depending on target
 
+            string enter = "";
             foreach (var entry in entries) enter += entry + "\n";
 
-            if (File.Exists(database))
+            if (File.Exists(database))  // If database specified above is found
             {
                 using var file = new StreamWriter(database, append: true);
-                file.WriteLine(enter + "\n");
+                file.WriteLine(enter + "\n");   // Append to existing .txt file
             }
-            else File.WriteAllText(database, enter + "\n");
+            else File.WriteAllText(database, enter + "\n"); // Else, create new
         }
 
+        // Clear all fields recursively
         private void clearAll(Control table)
         {
             foreach (var control in table.Controls)
@@ -152,7 +161,8 @@ namespace oop_contactTracer
                     clearAll(control as TableLayoutPanel);
             }
         }
-
+        
+        // Warn user before application closing
         private void appClosing(object sender, FormClosingEventArgs e)
         {
             var msg = "Thank you for using C#'s Contact Tracer~ keep safe!";
