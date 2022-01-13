@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;    // For handling & manipulating files
+using System.Security.Principal;    // For getting current user's name 
 
 namespace oop_contactTracer
 {
@@ -106,13 +108,32 @@ namespace oop_contactTracer
                 }
             }
 
-            // append to text file
+            databaseEnter(new List<string>() {
+                dateTime, temp, fullName, gender,
+                completeAddress, health, contacts
+            });
 
             if (MessageBox.Show($"Your form has successfully pushed through"
                 + $", {first.Text}~ much thanks!\n\nWant to submit again?",
                 "Submission Complete", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Asterisk) == DialogResult.Yes)
                     clearAll(innerTable); else Application.Exit();
+        }
+
+        private void databaseEnter(List<string> entries)
+        {
+            string enter = "";
+            string username = "Benedict Fernando";
+            string database = $@"C:\Users\{username}\Downloads\CTDatabase.txt";
+
+            foreach (var entry in entries) enter += entry + "\n";
+
+            if (File.Exists(database))
+            {
+                using var file = new StreamWriter(database, append: true);
+                file.WriteLine(enter + "\n");
+            }
+            else File.WriteAllText(database, enter + "\n");
         }
 
         private void clearAll(Control table)
