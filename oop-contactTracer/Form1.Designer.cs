@@ -238,7 +238,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 32);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Temperature (C°)";
+            this.label2.Text = "Temperature (°C)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // addressTable

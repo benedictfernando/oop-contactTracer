@@ -95,7 +95,8 @@ namespace oop_contactTracer
         // Process data if all fields are filled up
         private void processData()
         {
-            string dateTime = DateTime.Now.ToString(), temp = this.temp.Text,
+            string dateTime = DateTime.Now.ToString(),
+                    temp = this.temp.Text + " \x00B0C",
                 fullName = $"{last.Text}, {first.Text} {middle.Text}",
                 completeAddress = $"{house.Text} " +
                     $"{street.Text} {barangay.Text}, {city.Text}",
