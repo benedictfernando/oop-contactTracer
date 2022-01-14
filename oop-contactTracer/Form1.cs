@@ -117,14 +117,13 @@ namespace oop_contactTracer
             databaseEnter(new List<string>() {
                 dateTime, temp, fullName, gender,
                 completeAddress, health, contacts
-            });
+            }); clearAll(innerTable);   // Clear all fields
 
             // Determine between form resubmission or application exit
             if (MessageBox.Show($"Your form has successfully pushed through"
                 + $", {first.Text}~ much thanks!\n\nWant to submit again?",
                 "Submission Complete", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Asterisk) == DialogResult.Yes)
-                    clearAll(innerTable); else Application.Exit();
+                MessageBoxIcon.Asterisk) == DialogResult.No) Application.Exit();
         }
 
         // Enter entries to database
