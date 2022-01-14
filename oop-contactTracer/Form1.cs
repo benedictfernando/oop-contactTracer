@@ -140,7 +140,7 @@ namespace oop_contactTracer
             if (File.Exists(database))  // If database specified above is found
             {
                 using var file = new StreamWriter(database, append: true);
-                file.WriteLine(enter + "\n");   // Append to existing .txt file
+                file.WriteLine(enter);   // Append to existing .txt file
             }
             else File.WriteAllText(database, enter + "\n"); // Else, create new
         }
